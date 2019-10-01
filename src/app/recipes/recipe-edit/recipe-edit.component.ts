@@ -81,12 +81,11 @@ export class RecipeEditComponent implements OnInit {
     let recipeDescription = "";
     let recipeIngredients = new FormArray([]);
 
-    //error in if block - recipe details not able to fetch
     if (this.editMode) {
       var recipe: Recipe = this.recipeService.getRecipe(this.id);
       recipeName = recipe.name;
       recipeImagePath = recipe.imagePath;
-      recipeDescription = recipe.discription;
+      recipeDescription = recipe.description;
 
       if (recipe["ingredients"]) {
         for (let ingredient of recipe.ingredients) {
