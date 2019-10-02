@@ -1,3 +1,4 @@
+import { AuthComponent } from "./auth/auth.component";
 import { RecipeEditComponent } from "./recipes/recipe-edit/recipe-edit.component";
 import { RecipeStartComponent } from "./recipes/recipe-start/recipe-start.component";
 import { NgModule } from "@angular/core";
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
       }
     ]
   },
-  { path: "shopping-list", component: ShoppingListComponent }
+  { path: "shopping-list", component: ShoppingListComponent },
+  { path: "auth", component: AuthComponent }
 ];
 
 @NgModule({
